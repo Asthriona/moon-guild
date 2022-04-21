@@ -1,64 +1,67 @@
 <template>
   <div class="Footer text-center">
+    <v-card>
       <v-footer v-bind="localAttrs" :padless="padless" dark>
-          <v-card-text class="white--text">
-            2019 - {{ new Date().getFullYear() }} —
-            <strong class="text-uppercase">Moon</strong> <span class="text-uppercase">guild</span> - All Right Reserved.<br />
-            Code Made by
-            <a
-              href="https://rainboomstudio.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Rainboom Studio</a
-            > ●
-            Hosting
-            <a
-              href="https://team.yukiko.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Yukiko Dev Team</a
-            > ●
-            DNS Powered by
-            <a
-              href="https://Asthriona.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Asthriona ltd.</a
-            ><br />
-            Domain uptime: {{ longTime }} <br />
-            <div class="foot_logo">
-              <p>Operating Company</p>
-              <div class="figure">
-                <img
-                  src="https://cdn.nishikino.xyz/asthriona/icons/footLogo.png"
-                  alt="Asthriona Logo"
-                  style="width: 100%"
-                />
-              </div>
+        <v-card-text class="white--text">
+          2019 - {{ new Date().getFullYear() }} —
+          <strong class="text-uppercase">Moon</strong>
+          <span class="text-uppercase">guild</span> - All Right Reserved.<br />
+          Code Made by
+          <a
+            href="https://rainboomstudio.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Rainboom Studio</a
+          >
+          ● Hosting
+          <a
+            href="https://team.yukiko.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Yukiko Dev Team</a
+          >
+          ● DNS Powered by
+          <a
+            href="https://Asthriona.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Asthriona ltd.</a
+          ><br />
+          Domain uptime: {{ longTime }} <br />
+          <div class="foot_logo">
+            <p>Operating Company</p>
+            <div class="figure">
+              <img
+                src="https://cdn.nishikino.xyz/asthriona/icons/footLogo.png"
+                alt="Asthriona Logo"
+                style="width: 100%"
+              />
             </div>
-          </v-card-text>
+          </div>
+        </v-card-text>
       </v-footer>
+    </v-card>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'The-Footer',
-    data() {
-        return {
-            icons: [
-                'mdi-home',
-                'mdi-email',
-                'mdi-calendar',
-                'mdi-account',
-                'mdi-delete',
-            ],
-            longTime: 0,
-            padless: true,
-            variant: 'absolute',
-        }
-    },
-      methods: {
+  name: "The-Footer",
+  data() {
+    return {
+      icons: [
+        "mdi-home",
+        "mdi-email",
+        "mdi-calendar",
+        "mdi-account",
+        "mdi-delete",
+      ],
+      longTime: 0,
+      padless: true,
+      variant: "absolute",
+    };
+  },
+  methods: {
     //Code by Aimee (http://www.mangoya.cn/#/)
     runTime() {
       //运行倒计时
@@ -83,27 +86,29 @@ export default {
       console.log(
         "Moon Guild\nHosted by Nishikino Networks, \nDNS by Asthriona ltd.\nCode by Asthriona \nTheme by Asthriona"
       );
-    }
+    },
   },
   created() {
     this.runTime();
   },
-    computed: {
-        localAttrs() {
-            const attrs = {}
-        if(this.variant === 'default') {
-            attrs.absolute = false,
-            attrs.fixed = false
-        } else {
-            attrs[this.variant] = true
-        }
-        return attrs
-        },
-    }
+  computed: {
+    localAttrs() {
+      const attrs = {};
+      if (this.variant === "default") {
+        (attrs.absolute = false), (attrs.fixed = false);
+      } else {
+        attrs[this.variant] = true;
+      }
+      return attrs;
+    },
+  },
 };
 </script>
 
 <style scoped>
+.Footer {
+  margin-top: 150px !important;
+}
 .foot_logo {
   display: table;
   max-width: 300px;

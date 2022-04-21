@@ -3,10 +3,10 @@
     <v-container>
       <v-banner>
         <div class="header">
-          <span class="font-weight-light display-3">We Are</span> <br />
-          <p><span class="font-weight-bold text-uppercase display-4">Moon</span>
-          <span class="font-weight-light text-uppercase display-4">Guild</span></p>
-          <span class="font-weight-light headline">Your new World Of Warcraft Experiance</span>
+          <span class="font-weight-light display-2">We Are</span> <br />
+          <p><span class="font-weight-bold text-uppercase display-3">Moon</span>
+          <span class="font-weight-light text-uppercase display-3">Guild</span></p>
+          <span class="font-weight-light headline">Your new World Of Warcraft Experience</span>
         </div>
       </v-banner>
       <v-row>
